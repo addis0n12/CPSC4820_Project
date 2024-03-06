@@ -17,9 +17,13 @@ commuter_lots = {
     "C11": random.choice([1, 0])
 }
 
-# Just testing the pygame zero install, was having some issues getting it working
+# Actors for the button and the light
 lit_button = Actor("lit_button.png")
+unlit_button = Actor("unlit_button.png")
 
+# currently only selects the button state once per time that it is run, will be changed later
 def draw():
-    lit_button.draw()
+    unlit_button.draw()
+    if commuter_lots.get("C1") == 0:
+        lit_button.draw()
 
