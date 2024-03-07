@@ -1,5 +1,5 @@
 # Interactivity Example PR1c
-# Addison Hough
+# Addison Hough, Lucas Grijak
 
 import random
 import moveWinHome
@@ -21,9 +21,28 @@ commuter_lots = {
 lit_button = Actor("lit_button.png")
 unlit_button = Actor("unlit_button.png")
 
-# currently only selects the button state once per time that it is run, will be changed later
+# currently must be rerun for new button state, will be changed in future
 def draw():
+    if (commuter_lots.get("C1") == 1):
+        print("C1: Full")
+    else:
+        print("C1: Not Full")
+
+    if (commuter_lots.get("C2") == 1):
+        print("C2: Full")
+    else:
+        print("C2: Not Full")
+
+    if (commuter_lots.get("C3") == 1):
+        print("C3: Full")
+    else:
+        print("C3: Not Full")
+
+    if (commuter_lots.get("C11") == 1):
+        print("C11: Full")
+    else:
+        print("C11: Not Full")
+
     unlit_button.draw()
     if commuter_lots.get("C1") == 0:
         lit_button.draw()
-
